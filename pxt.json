@@ -6,7 +6,8 @@
         "radio": "*",
         "microphone": "*",
         "radio-broadcast": "*",
-        "Environment-and-Science-IoT": "github:tinkertanker/pxt-iot-environment-kit#v4.6.0"
+        "Environment-and-Science-IoT": "github:tinkertanker/pxt-iot-environment-kit#v4.6.0",
+        "radio-blockchain": "github:microsoft/pxt-radio-blockchain#v0.1.4"
     },
     "files": [
         "main.blocks",
