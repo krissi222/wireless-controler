@@ -16,9 +16,14 @@ radio.onReceivedNumber(function (receivedNumber) {
         `)
 })
 radio.onReceivedMessage(RadioMessage.progA, function () {
+    end = 0
     basic.showIcon(IconNames.Yes)
+    while (end == 0) {
+        basic.showString("NTS BEST")
+    }
 })
 radio.onReceivedMessage(RadioMessage.progC, function () {
+    end = 0
     basic.showIcon(IconNames.Yes)
 })
 radio.onReceivedMessage(RadioMessage.testreq, function () {
@@ -47,7 +52,11 @@ radio.onReceivedMessage(RadioMessage.testreq2, function () {
         `)
 })
 radio.onReceivedMessage(RadioMessage.progB, function () {
+    end = 0
     basic.showIcon(IconNames.Yes)
+})
+input.onPinPressed(TouchPin.P2, function () {
+    end = 1
 })
 input.onButtonPressed(Button.B, function () {
     basic.showArrow(ArrowNames.East)
@@ -68,6 +77,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showArrow(ArrowNames.East)
     radio.sendMessage(RadioMessage.progC)
 })
+let end = 0
 radio.setFrequencyBand(15)
 basic.showLeds(`
     # . . . #
